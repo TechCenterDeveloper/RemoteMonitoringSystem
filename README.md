@@ -1,4 +1,4 @@
-# RemoteMonitoringSystem
+# RemoteMonitoringSystem (Demo)
 Demo for a outdoor display remote monitoring system only collect temperature data from different parts based on Particle Electron.
 
 BOM:
