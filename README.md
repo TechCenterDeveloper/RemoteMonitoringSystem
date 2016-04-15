@@ -13,4 +13,10 @@ BOM:
 
 5. x1 bread board
 
-6. wires
+6. x1 red LED
+
+7. x1 green LED
+
+8. x2 resistor for LEDs
+
+9. wires
