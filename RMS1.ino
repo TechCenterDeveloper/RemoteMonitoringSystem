@@ -213,7 +213,7 @@ void setup(void)
     }
     else
     {
-        Serial.println("Unable to find address for Device 6 - Media Player Box-DS18B20 TO-92 packet");
+        Serial.println("Unable to find address for Device 5 - Exterior Ambient-DS18B20 High Temp");
         
         // blink the red LED
         digitalWrite(led_red, HIGH);
@@ -246,7 +246,7 @@ void setup(void)
     }
     else
     {
-        Serial.println("Unable to find address for Device 6 - Media Player Box-DS18B20 TO-92 packet");
+        Serial.println("Unable to find address for Device 6 - Blackbody-DS18B20 High Temp");
         
         // blink the red LED
         digitalWrite(led_red, HIGH);
