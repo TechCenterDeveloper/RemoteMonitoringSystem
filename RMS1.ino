@@ -56,6 +56,9 @@ void setup(void)
 {
     pinMode(led_red, OUTPUT);
     pinMode(led_green, OUTPUT);
+    //LED initial setup, high = off, low = on
+    digitalWrite(led_green, HIGH);
+    digitalWrite(led_red, HIGH);
     Time.zone(-5);
     Serial.begin(9600);    
     sensors.begin();
@@ -67,10 +70,11 @@ void setup(void)
     if(sensors.isConnected(sensorAddr1))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // show the addresses we found on the bus
         Serial.print("Device 1 Address: ");
@@ -87,20 +91,22 @@ void setup(void)
         Serial.println("Unable to find address for Device 1 - Display Panel Front-Type K thermocouple");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //Front Glass-Type K thermocouple
     if(sensors.isConnected(sensorAddr2))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // show the addresses we found on the bus
         Serial.print("Device 2 Address: ");
@@ -117,27 +123,29 @@ void setup(void)
         Serial.println("Unable to find address for Device 2 - Front Glass-Type K thermocouple");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //Interior Ambient-DS18B20 TO-92 packet
     if(sensors.isConnected(sensorAddr3))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // set resolution to 10 (0.25C)
         sensors.setResolution(sensorAddr3, 10);
         
         // show the addresses we found on the bus
         Serial.print("Device 3 Address: ");
-        printAddress(sensorAddr2);
+        printAddress(sensorAddr3);
         Serial.println();
         
         // show the resolution of the DS18B20 sensor
@@ -150,27 +158,29 @@ void setup(void)
         Serial.println("Unable to find address for Device 3 - Interior Ambient-DS18B20 TO-92 packet");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //Media Player Box-DS18B20 TO-92 packet
     if(sensors.isConnected(sensorAddr4))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // set resolution to 10 (0.25C)
         sensors.setResolution(sensorAddr4, 10);
         
         // show the addresses we found on the bus
         Serial.print("Device 4 Address: ");
-        printAddress(sensorAddr2);
+        printAddress(sensorAddr4);
         Serial.println();
         
         // show the resolution of the DS18B20 sensor
@@ -183,27 +193,29 @@ void setup(void)
         Serial.println("Unable to find address for Device 4 - Media Player Box-DS18B20 TO-92 packet");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //Exterior Ambient-DS18B20 High Temp
     if(sensors.isConnected(sensorAddr5))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // set resolution to 10 (0.25C)
         sensors.setResolution(sensorAddr5, 10);
         
         // show the addresses we found on the bus
         Serial.print("Device 5 Address: ");
-        printAddress(sensorAddr2);
+        printAddress(sensorAddr5);
         Serial.println();
         
         // show the resolution of the DS18B20 sensor
@@ -216,27 +228,29 @@ void setup(void)
         Serial.println("Unable to find address for Device 5 - Exterior Ambient-DS18B20 High Temp");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //Blackbody-DS18B20 High Temp
     if(sensors.isConnected(sensorAddr6))
     {
         // blink the green LED
-        digitalWrite(led_green, HIGH);
-        delay(1000);
         digitalWrite(led_green, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_green, HIGH);
+        delay(500);
         
         // set resolution to 10 (0.25C)
         sensors.setResolution(sensorAddr6, 10);
         
         // show the addresses we found on the bus
         Serial.print("Device 6 Address: ");
-        printAddress(sensorAddr2);
+        printAddress(sensorAddr6);
         Serial.println();
         
         // show the resolution of the DS18B20 sensor
@@ -249,20 +263,23 @@ void setup(void)
         Serial.println("Unable to find address for Device 6 - Blackbody-DS18B20 High Temp");
         
         // blink the red LED
-        digitalWrite(led_red, HIGH);
-        delay(1000);
         digitalWrite(led_red, LOW);
-        delay(1000);
+        delay(500);
+        
+        digitalWrite(led_red, HIGH);
+        delay(500);
     }
     
     //show final status for all the sensors thru LEDs
     if(sensors.isConnected(sensorAddr1) && sensors.isConnected(sensorAddr2) && sensors.isConnected(sensorAddr3) && sensors.isConnected(sensorAddr4) && sensors.isConnected(sensorAddr5) && sensors.isConnected(sensorAddr6))
     {
-         digitalWrite(led_green, HIGH);
+        digitalWrite(led_green, LOW);
+        digitalWrite(led_red, HIGH);
     }
     else
     {
-        digitalWrite(led_red, HIGH);
+        digitalWrite(led_green, HIGH);
+        digitalWrite(led_red, LOW);
     }
 
 }   
