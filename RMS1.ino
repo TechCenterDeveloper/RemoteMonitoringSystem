@@ -328,10 +328,10 @@ void loop(void)
     
     ThingSpeak.setField(1, (float)tempC_DisplayPanelFront);
     ThingSpeak.setField(2, (float)tempC_FrontGlass);
-    ThingSpeak.setField(2, (float)tempC_InteriorAmbient);
-    ThingSpeak.setField(2, (float)tempC_MediaPlayerBox);
-    ThingSpeak.setField(2, (float)tempC_ExteriorAmbient);
-    ThingSpeak.setField(2, (float)tempC_Blackbody);
+    ThingSpeak.setField(3, (float)tempC_InteriorAmbient);
+    ThingSpeak.setField(4, (float)tempC_MediaPlayerBox);
+    ThingSpeak.setField(5, (float)tempC_ExteriorAmbient);
+    ThingSpeak.setField(6, (float)tempC_Blackbody);
     ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
     
     if(Time.hour() <= 15 && Time.hour() >= 8)
