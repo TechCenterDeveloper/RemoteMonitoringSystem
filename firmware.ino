@@ -1,3 +1,7 @@
+// Set up product id and product version for team account
+PRODUCT_ID(527);
+PRODUCT_VERSION(1);
+
 // This #include statement was automatically added by the Particle IDE.
 #include "ThingSpeak/ThingSpeak.h"
 
